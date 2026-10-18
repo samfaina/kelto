@@ -1,0 +1,17 @@
+schema: spec-driven
+
+# Managed by agent-workflow. Matt Pocock's skills write these artifacts
+# through the adapter in docs/agents/issue-tracker.md.
+context: |
+  Artifacts are written through the adapter in docs/agents/issue-tracker.md.
+  Write every artifact in English.
+
+rules:
+  proposal:
+    - End with an "## Out of Scope" section listing what this change leaves out
+  design:
+    - Include a "## Testing Decisions" section naming the agreed test seams
+  tasks:
+    - Write each group as one ticket in the "Ticket format" of docs/agents/issue-tracker.md, a vertical slice through every layer it touches with a "Blocked by:" line, a "What to build:" line and acceptance-criteria checkboxes
+    - Each ticket lands its own tests, so groups follow features, never layers such as setup, core or tests
+    - The last group is the manual test ticket, blocked by every other ticket, with about five steps
