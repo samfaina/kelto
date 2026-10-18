@@ -1,0 +1,17 @@
+{
+  "protectedBranches": ["main", "master"],
+  "allowPush": false,
+  "checkCommand": "",
+  "pullRequest": { "via": "cli", "command": "gh pr create --base {base} --head {branch} --title {title} --body-file {bodyFile}" },
+  "protectedPaths": [
+    ".env",
+    ".env.*",
+    ".claude/settings.json",
+    ".claude/settings.local.json",
+    ".claude/agent-workflow.json",
+    ".claude/hooks/**",
+    ".claude/skills/**",
+    ".claude/references/**",
+    "openspec/specs/**"
+  ]
+}
